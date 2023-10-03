@@ -37,47 +37,63 @@ public interface GramaticaConstants {
   /** RegularExpression Id. */
   int PR_DO = 16;
   /** RegularExpression Id. */
-  int PR_BREAK = 17;
+  int PR_SWITCH = 17;
   /** RegularExpression Id. */
-  int PR_RETURN = 18;
+  int PR_BREAK = 18;
   /** RegularExpression Id. */
-  int PR_CASE = 19;
+  int PR_RETURN = 19;
   /** RegularExpression Id. */
-  int INCREMENT = 20;
+  int PR_CASE = 20;
   /** RegularExpression Id. */
-  int DECREMENT = 21;
+  int PR_DEFAULT = 21;
   /** RegularExpression Id. */
-  int IQUAL_TO = 22;
+  int INCREMENT = 22;
   /** RegularExpression Id. */
-  int SUM = 23;
+  int DECREMENT = 23;
   /** RegularExpression Id. */
-  int MINUS = 24;
+  int IQUAL_TO = 24;
   /** RegularExpression Id. */
-  int MULTIPLY = 25;
+  int SUM = 25;
   /** RegularExpression Id. */
-  int DEVIDE = 26;
+  int MINUS = 26;
   /** RegularExpression Id. */
-  int REMEAINDER = 27;
+  int MULTIPLY = 27;
   /** RegularExpression Id. */
-  int DELIMITADOR = 28;
+  int DEVIDE = 28;
   /** RegularExpression Id. */
-  int DOBLE_POINT = 29;
+  int REMEAINDER = 29;
   /** RegularExpression Id. */
-  int BRACE_OPEN = 30;
+  int IQUAL = 30;
   /** RegularExpression Id. */
-  int BRACE_CLOSE = 31;
+  int DELIMITADOR = 31;
   /** RegularExpression Id. */
-  int PARENTHESIS_OPEN = 32;
+  int DOBLE_POINT = 32;
   /** RegularExpression Id. */
-  int PARENTHESIS_CLOSE = 33;
+  int DOTE = 33;
   /** RegularExpression Id. */
-  int BRACKET_OPEN = 34;
+  int QUOTES = 34;
   /** RegularExpression Id. */
-  int BRACKET_CLOSE = 35;
+  int COM = 35;
   /** RegularExpression Id. */
-  int ID = 36;
+  int BRACE_OPEN = 36;
   /** RegularExpression Id. */
-  int NUMBER = 37;
+  int BRACE_CLOSE = 37;
+  /** RegularExpression Id. */
+  int PARENTHESIS_OPEN = 38;
+  /** RegularExpression Id. */
+  int PARENTHESIS_CLOSE = 39;
+  /** RegularExpression Id. */
+  int BRACKET_OPEN = 40;
+  /** RegularExpression Id. */
+  int BRACKET_CLOSE = 41;
+  /** RegularExpression Id. */
+  int SMALLER_THAN = 42;
+  /** RegularExpression Id. */
+  int GREATER_THAN = 43;
+  /** RegularExpression Id. */
+  int ID = 44;
+  /** RegularExpression Id. */
+  int NUMBER = 45;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -101,9 +117,11 @@ public interface GramaticaConstants {
     "\"for\"",
     "\"while\"",
     "\"do\"",
+    "\"switch\"",
     "\"break\"",
     "\"return\"",
     "\"case\"",
+    "\"default\"",
     "\"++\"",
     "\"--\"",
     "\"==\"",
@@ -112,14 +130,20 @@ public interface GramaticaConstants {
     "\"*\"",
     "\"/\"",
     "\"%\"",
+    "\"=\"",
     "\";\"",
     "\":\"",
+    "\".\"",
+    "\"\\\"\"",
+    "\",\"",
     "\"{\"",
     "\"}\"",
     "\"(\"",
     "\")\"",
     "\"[\"",
     "\"]\"",
+    "\"<\"",
+    "\">\"",
     "<ID>",
     "<NUMBER>",
   };
