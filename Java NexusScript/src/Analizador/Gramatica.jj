@@ -31,6 +31,8 @@ TOKEN : {
     |<PR_INTERGER:"varInt"> {System.out.println("PR_INTERGER ->"+ img + "\n");}
     |<PR_DECIMAL:"varDecimal"> {System.out.println("PR_DECIMAL ->"+ img + "\n");}
     |<PR_TXT:"varChar"> {System.out.println("PR_TXT ->"+ img + "\n");}
+    |<PR_PRINT:"print"> {System.out.println("PR_PRINT ->"+ img + "\n");}
+    |<PR_KEYBOARD:"scanner"> {System.out.println("PR_KEYBOARD ->"+ img + "\n");}
 
     |<PR_IF:"if"> {System.out.println("PR_IF ->"+ img + "\n");}
     |<PR_ELSE:"ifnot"> {System.out.println("PR_ELSE ->"+ img + "\n");}
@@ -57,6 +59,7 @@ TOKEN : {
 //Puntuacion
 TOKEN : {
     <DELIMITADOR:";"> {System.out.println("DELIMITADOR ->"+ img + "\n");}
+    |<DOBLE_POINT:":"> {System.out.println("DOBLE_POINT ->"+ img + "\n");}
     |<BRACE_OPEN:"{"> {System.out.println("BRACE_OPEN ->"+ img + "\n");}
     |<BRACE_CLOSE:"}"> {System.out.println("BRACE_CLOSE ->"+ img + "\n");}
     |<PARENTHESIS_OPEN:"("> {System.out.println("PARENTHESIS_OPEN ->"+ img + "\n");}

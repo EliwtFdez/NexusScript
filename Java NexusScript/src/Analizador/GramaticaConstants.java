@@ -23,55 +23,61 @@ public interface GramaticaConstants {
   /** RegularExpression Id. */
   int PR_TXT = 9;
   /** RegularExpression Id. */
-  int PR_IF = 10;
+  int PR_PRINT = 10;
   /** RegularExpression Id. */
-  int PR_ELSE = 11;
+  int PR_KEYBOARD = 11;
   /** RegularExpression Id. */
-  int PR_FOR = 12;
+  int PR_IF = 12;
   /** RegularExpression Id. */
-  int PR_WHILE = 13;
+  int PR_ELSE = 13;
   /** RegularExpression Id. */
-  int PR_DO = 14;
+  int PR_FOR = 14;
   /** RegularExpression Id. */
-  int PR_BREAK = 15;
+  int PR_WHILE = 15;
   /** RegularExpression Id. */
-  int PR_RETURN = 16;
+  int PR_DO = 16;
   /** RegularExpression Id. */
-  int PR_CASE = 17;
+  int PR_BREAK = 17;
   /** RegularExpression Id. */
-  int INCREMENT = 18;
+  int PR_RETURN = 18;
   /** RegularExpression Id. */
-  int DECREMENT = 19;
+  int PR_CASE = 19;
   /** RegularExpression Id. */
-  int IQUAL_TO = 20;
+  int INCREMENT = 20;
   /** RegularExpression Id. */
-  int SUM = 21;
+  int DECREMENT = 21;
   /** RegularExpression Id. */
-  int MINUS = 22;
+  int IQUAL_TO = 22;
   /** RegularExpression Id. */
-  int MULTIPLY = 23;
+  int SUM = 23;
   /** RegularExpression Id. */
-  int DEVIDE = 24;
+  int MINUS = 24;
   /** RegularExpression Id. */
-  int REMEAINDER = 25;
+  int MULTIPLY = 25;
   /** RegularExpression Id. */
-  int DELIMITADOR = 26;
+  int DEVIDE = 26;
   /** RegularExpression Id. */
-  int BRACE_OPEN = 27;
+  int REMEAINDER = 27;
   /** RegularExpression Id. */
-  int BRACE_CLOSE = 28;
+  int DELIMITADOR = 28;
   /** RegularExpression Id. */
-  int PARENTHESIS_OPEN = 29;
+  int DOBLE_POINT = 29;
   /** RegularExpression Id. */
-  int PARENTHESIS_CLOSE = 30;
+  int BRACE_OPEN = 30;
   /** RegularExpression Id. */
-  int BRACKET_OPEN = 31;
+  int BRACE_CLOSE = 31;
   /** RegularExpression Id. */
-  int BRACKET_CLOSE = 32;
+  int PARENTHESIS_OPEN = 32;
   /** RegularExpression Id. */
-  int ID = 33;
+  int PARENTHESIS_CLOSE = 33;
   /** RegularExpression Id. */
-  int NUMBER = 34;
+  int BRACKET_OPEN = 34;
+  /** RegularExpression Id. */
+  int BRACKET_CLOSE = 35;
+  /** RegularExpression Id. */
+  int ID = 36;
+  /** RegularExpression Id. */
+  int NUMBER = 37;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -88,6 +94,8 @@ public interface GramaticaConstants {
     "\"varInt\"",
     "\"varDecimal\"",
     "\"varChar\"",
+    "\"print\"",
+    "\"scanner\"",
     "\"if\"",
     "\"ifnot\"",
     "\"for\"",
@@ -105,6 +113,7 @@ public interface GramaticaConstants {
     "\"/\"",
     "\"%\"",
     "\";\"",
+    "\":\"",
     "\"{\"",
     "\"}\"",
     "\"(\"",
