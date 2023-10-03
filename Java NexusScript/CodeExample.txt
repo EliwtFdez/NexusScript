@@ -1,0 +1,48 @@
+Start
+
+varInt numero = 10;
+varDecimal decimal = 3.14;
+varchar texto = "Hola, mundo!";
+
+print("El número es: " + numero);
+print("El decimal es: " + decimal);
+print("El texto es: " + texto);
+
+if (numero == 10) {
+    print("El número es igual a 10");
+} else {
+    print("El número no es igual a 10");
+}
+
+for (varInt i = 0; i < 5; i++) {
+    print("Iteración " + (i + 1));
+}
+
+while (numero > 0) {
+    print("Número: " + numero);
+    numero--;
+}
+
+do {
+    print("Este mensaje se imprimirá al menos una vez.");
+} while (numero > 0);
+
+switch (numero) {
+    case 1:
+        print("Número es igual a 1");
+        break;
+    case 2:
+        print("Número es igual a 2");
+        break;
+    default:
+        print("Número no es ni 1 ni 2");
+}
+
+numero++;
+numero--;
+
+ifnot (numero == 5) {
+    print("Número no es igual a 5");
+}
+
+End
