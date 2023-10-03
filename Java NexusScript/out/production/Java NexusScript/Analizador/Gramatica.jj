@@ -1,0 +1,79 @@
+//declara las opciones que debe de seguir el analizador
+options {
+    IGNORE_CASE = true;  //No hace distincion entre mayus y mins
+    STATIC = false; //Los memtodos que genere la compilacion no sean estaticos
+    BUILD_PARSER = false;   // para indicar a javacc y como se va a englobar
+}
+PARSER_BEGIN(Gramatica)
+//analiza el codigo.txt
+
+package Analizador;
+
+public class Gramatica{}
+PARSER_END(Gramatica)
+
+// Analizador Lexico
+
+//saltar espacios
+SKIP :
+{
+    " "
+    | "\t"
+    | "\r"
+    | "\n"
+}
+
+// Tokens:
+
+TOKEN : {
+    <START: "Start">
+    |<END:"End">
+    |<PR_INTERGER:"varInt">
+    |<PR_DECIMAL:"varDecimal">
+    |<PR_TXT:"varChar">
+
+    |<PR_IF:"if">
+    |<PR_ELSE:"ifnot">
+    |<PR_FOR:"for">
+    |<PR_WHILE:"while">
+    |<PR_DO:"do">
+
+    |<PR_BREAK:"break">
+    |<PR_RETURN:"return">
+
+    |<INCREMENT:"++">
+    |<DECREMENT:"--">
+    |<IQUAL_TO:"==">
+
+    |<SUM:"+">
+    |<MINUS:"-">
+    |<MULTIPLY:"*">
+    |<DEVIDE:"/">
+    |<REMEAINDER:"%">
+
+}
+
+//Puntuacion
+TOKEN : {
+    <DELIMITADOR:";">
+    |<BRACE_OPEN:"{">
+    |<BRACE_CLOSE:"}">
+    |<PARENTHESIS_OPEN:"(">
+    |<PARENTHESIS_CLOSE:")">
+    |<BRACKET_OPEN:"[">
+    |<BRACKET_CLOSE:"]">
+
+}
+
+//Identificadores
+
+
+TOKEN :
+{
+    <ID: (["a"-"z"]|["A"-"Z"])(["a"-"z"]|["A"-"Z"]["0"-"9"])*>
+}
+
+TOKEN :
+{
+    <NUMBER: (["0"-"9"])+>
+}

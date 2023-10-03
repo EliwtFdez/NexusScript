@@ -1,0 +1,80 @@
+//declara las opciones que debe de seguir el analizador
+options {
+    IGNORE_CASE = true;  //No hace distincion entre mayus y mins
+    STATIC = false; //Los memtodos que genere la compilacion no sean estaticos
+    BUILD_PARSER = false;   // para indicar a javacc y como se va a englobar
+}
+PARSER_BEGIN(Gramatica)
+//analiza el codigo.txt
+
+package Analizador;
+
+public class Gramatica{}
+PARSER_END(Gramatica)
+
+// Analizador Lexico
+
+//saltar espacios
+SKIP :
+{
+    " "
+    | "\t"
+    | "\r"
+    | "\n"
+}
+
+// Tokens:
+
+TOKEN : {
+    <START: "Start"> {System.out.println("START ->"+ img + "\n");}
+    |<END:"End"> {System.out.println("END ->"+ img + "\n");}
+    |<PR_INTERGER:"varInt"> {System.out.println("PR_INTERGER ->"+ img + "\n");}
+    |<PR_DECIMAL:"varDecimal"> {System.out.println("PR_DECIMAL ->"+ img + "\n");}
+    |<PR_TXT:"varChar"> {System.out.println("PR_TXT ->"+ img + "\n");}
+
+    |<PR_IF:"if"> {System.out.println("PR_IF ->"+ img + "\n");}
+    |<PR_ELSE:"ifnot"> {System.out.println("PR_ELSE ->"+ img + "\n");}
+    |<PR_FOR:"for"> {System.out.println("PR_FOR ->"+ img + "\n");}
+    |<PR_WHILE:"while"> {System.out.println("PR_WHILE ->"+ img + "\n");}
+    |<PR_DO:"do"> {System.out.println("PR_DO ->"+ img + "\n");}
+
+    |<PR_BREAK:"break"> {System.out.println("PR_BREAK ->"+ img + "\n");}
+    |<PR_RETURN:"return"> {System.out.println("PR_RETURN ->"+ img + "\n");}
+    |<PR_CASE:"case"> {System.out.println("PR_CASE ->"+ img + "\n");}
+
+    |<INCREMENT:"++"> {System.out.println("INCREMENT ->"+ img + "\n");}
+    |<DECREMENT:"--"> {System.out.println("DECREMENT ->"+ img + "\n");}
+    |<IQUAL_TO:"=="> {System.out.println("IQUAL_TO ->"+ img + "\n");}
+
+    |<SUM:"+"> {System.out.println("SUM ->"+ img + "\n");}
+    |<MINUS:"-"> {System.out.println("MINUS ->"+ img + "\n");}
+    |<MULTIPLY:"*"> {System.out.println("MULTIPLY ->"+ img + "\n");}
+    |<DEVIDE:"/"> {System.out.println("DEVIDE ->"+ img + "\n");}
+    |<REMEAINDER:"%"> {System.out.println("REMEAINDER ->"+ img + "\n");}
+
+}
+
+//Puntuacion
+TOKEN : {
+    <DELIMITADOR:";"> {System.out.println("DELIMITADOR ->"+ img + "\n");}
+    |<BRACE_OPEN:"{"> {System.out.println("BRACE_OPEN ->"+ img + "\n");}
+    |<BRACE_CLOSE:"}"> {System.out.println("BRACE_CLOSE ->"+ img + "\n");}
+    |<PARENTHESIS_OPEN:"("> {System.out.println("PARENTHESIS_OPEN ->"+ img + "\n");}
+    |<PARENTHESIS_CLOSE:")"> {System.out.println("PARENTHESIS_CLOSE ->"+ img + "\n");}
+    |<BRACKET_OPEN:"["> {System.out.println("BRACKET_OPEN ->"+ img + "\n");}
+    |<BRACKET_CLOSE:"]"> {System.out.println("BRACKET_CLOSE ->"+ img + "\n");}
+
+}
+
+//Identificadores
+
+
+TOKEN :
+{
+    <ID: (["a"-"z"]|["A"-"Z"])(["a"-"z"]|["A"-"Z"]["0"-"9"])*> {System.out.println("ID ->"+ img + "\n");}
+}
+
+TOKEN :
+{
+    <NUMBER: (["0"-"9"])+> {System.out.println("NUMBER ->"+ img + "\n");}
+}
