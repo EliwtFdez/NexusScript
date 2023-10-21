@@ -26,55 +26,55 @@ SKIP :
 // Tokens:
 
 TOKEN : {
-    <START: "Start"> {System.out.println("START ->"+ img + "\n");}
-    |<END:"End"> {System.out.println("END ->"+ img + "\n");}
-    |<PR_INTERGER:"varInt"> {System.out.println("PR_INTERGER ->"+ img + "\n");}
-    |<PR_DECIMAL:"varDecimal"> {System.out.println("PR_DECIMAL ->"+ img + "\n");}
-    |<PR_TXT:"varChar"> {System.out.println("PR_TXT ->"+ img + "\n");}
-    |<PR_PRINT:"print"> {System.out.println("PR_PRINT ->"+ img + "\n");}
-    |<PR_KEYBOARD:"scanner"> {System.out.println("PR_KEYBOARD ->"+ img + "\n");}
+    <START: "Start"> {System.out.println("START ->"+ image + "\n");}
+    |<END:"End"> {System.out.println("END ->"+ image + "\n");}
+    |<PR_INTERGER:"varInt"> {System.out.println("PR_INTERGER ->"+ image + "\n");}
+    |<PR_DECIMAL:"varDecimal"> {System.out.println("PR_DECIMAL ->"+ image + "\n");}
+    |<PR_TXT:"varChar"> {System.out.println("PR_TXT ->"+ image + "\n");}
+    |<PR_PRINT:"print"> {System.out.println("PR_PRINT ->"+ image + "\n");}
+    |<PR_KEYBOARD:"scanner"> {System.out.println("PR_KEYBOARD ->"+ image + "\n");}
 
-    |<PR_IF:"if"> {System.out.println("PR_IF ->"+ img + "\n");}
-    |<PR_ELSE:"ifnot"> {System.out.println("PR_ELSE ->"+ img + "\n");}
-    |<PR_FOR:"for"> {System.out.println("PR_FOR ->"+ img + "\n");}
-    |<PR_WHILE:"while"> {System.out.println("PR_WHILE ->"+ img + "\n");}
-    |<PR_DO:"do"> {System.out.println("PR_DO ->"+ img + "\n");}
-    |<PR_SWITCH:"switch"> {System.out.println("PR_SWITCH ->"+ img + "\n");}
+    |<PR_IF:"if"> {System.out.println("PR_IF ->"+ image + "\n");}
+    |<PR_ELSE:"ifnot"> {System.out.println("PR_ELSE ->"+ image + "\n");}
+    |<PR_FOR:"for"> {System.out.println("PR_FOR ->"+ image + "\n");}
+    |<PR_WHILE:"while"> {System.out.println("PR_WHILE ->"+ image + "\n");}
+    |<PR_DO:"do"> {System.out.println("PR_DO ->"+ image + "\n");}
+    |<PR_SWITCH:"switch"> {System.out.println("PR_SWITCH ->"+ image + "\n");}
 
-    |<PR_BREAK:"break"> {System.out.println("PR_BREAK ->"+ img + "\n");}
-    |<PR_RETURN:"return"> {System.out.println("PR_RETURN ->"+ img + "\n");}
-    |<PR_CASE:"case"> {System.out.println("PR_CASE ->"+ img + "\n");}
-    |<PR_DEFAULT:"default"> {System.out.println("PR_DEFAULT ->"+ img + "\n");}
+    |<PR_BREAK:"break"> {System.out.println("PR_BREAK ->"+ image + "\n");}
+    |<PR_RETURN:"return"> {System.out.println("PR_RETURN ->"+ image + "\n");}
+    |<PR_CASE:"case"> {System.out.println("PR_CASE ->"+ image + "\n");}
+    |<PR_DEFAULT:"default"> {System.out.println("PR_DEFAULT ->"+ image + "\n");}
 
-    |<INCREMENT:"++"> {System.out.println("INCREMENT ->"+ img + "\n");}
-    |<DECREMENT:"--"> {System.out.println("DECREMENT ->"+ img + "\n");}
-    |<IQUAL_TO:"=="> {System.out.println("IQUAL_TO ->"+ img + "\n");}
+    |<INCREMENT:"++"> {System.out.println("INCREMENT ->"+ image + "\n");}
+    |<DECREMENT:"--"> {System.out.println("DECREMENT ->"+ image + "\n");}
+    |<IQUAL_TO:"=="> {System.out.println("IQUAL_TO ->"+ image + "\n");}
 
-    |<SUM:"+"> {System.out.println("SUM ->"+ img + "\n");}
-    |<MINUS:"-"> {System.out.println("MINUS ->"+ img + "\n");}
-    |<MULTIPLY:"*"> {System.out.println("MULTIPLY ->"+ img + "\n");}
-    |<DEVIDE:"/"> {System.out.println("DEVIDE ->"+ img + "\n");}
-    |<REMEAINDER:"%"> {System.out.println("REMEAINDER ->"+ img + "\n");}
-    |<IQUAL:"="> {System.out.println("IQUAL ->"+ img + "\n");}
+    |<SUM:"+"> {System.out.println("SUM ->"+ image + "\n");}
+    |<MINUS:"-"> {System.out.println("MINUS ->"+ image + "\n");}
+    |<MULTIPLY:"*"> {System.out.println("MULTIPLY ->"+ image + "\n");}
+    |<DEVIDE:"/"> {System.out.println("DEVIDE ->"+ image + "\n");}
+    |<REMEAINDER:"%"> {System.out.println("REMEAINDER ->"+ image + "\n");}
+    |<IQUAL:"="> {System.out.println("IQUAL ->"+ image + "\n");}
 
 }
 
 //Puntuacion
 TOKEN : {
-    <DELIMITADOR:";"> {System.out.println("DELIMITADOR ->"+ img + "\n");}
-    |<DOBLE_POINT:":"> {System.out.println("DOBLE_POINT ->"+ img + "\n");}
-    |<DOTE:"."> {System.out.println("DOTE ->"+ img + "\n");}
-    |<QUOTES:"\""> {System.out.println("QUOTES ->"+ img + "\n");}
-    |<COM:","> {System.out.println("COM ->"+ img + "\n");}
+    <DELIMITADOR:";"> {System.out.println("DELIMITADOR ->"+ image + "\n");}
+    |<DOBLE_POINT:":"> {System.out.println("DOBLE_POINT ->"+ image + "\n");}
+    |<DOTE:"."> {System.out.println("DOTE ->"+ image + "\n");}
+    |<QUOTES:"\""> {System.out.println("QUOTES ->"+ image + "\n");}
+    |<COM:","> {System.out.println("COM ->"+ image + "\n");}
 
-    |<BRACE_OPEN:"{"> {System.out.println("BRACE_OPEN ->"+ img + "\n");}
-    |<BRACE_CLOSE:"}"> {System.out.println("BRACE_CLOSE ->"+ img + "\n");}
-    |<PARENTHESIS_OPEN:"("> {System.out.println("PARENTHESIS_OPEN ->"+ img + "\n");}
-    |<PARENTHESIS_CLOSE:")"> {System.out.println("PARENTHESIS_CLOSE ->"+ img + "\n");}
-    |<BRACKET_OPEN:"["> {System.out.println("BRACKET_OPEN ->"+ img + "\n");}
-    |<BRACKET_CLOSE:"]"> {System.out.println("BRACKET_CLOSE ->"+ img + "\n");}
-    |<SMALLER_THAN:"<">  {System.out.println("SMALLER_THAN ->"+ img + "\n");}
-    |<GREATER_THAN:">">  {System.out.println("GREATER_THAN ->"+ img + "\n");}
+    |<BRACE_OPEN:"{"> {System.out.println("BRACE_OPEN ->"+ image + "\n");}
+    |<BRACE_CLOSE:"}"> {System.out.println("BRACE_CLOSE ->"+ image + "\n");}
+    |<PARENTHESIS_OPEN:"("> {System.out.println("PARENTHESIS_OPEN ->"+ image + "\n");}
+    |<PARENTHESIS_CLOSE:")"> {System.out.println("PARENTHESIS_CLOSE ->"+ image + "\n");}
+    |<BRACKET_OPEN:"["> {System.out.println("BRACKET_OPEN ->"+ image + "\n");}
+    |<BRACKET_CLOSE:"]"> {System.out.println("BRACKET_CLOSE ->"+ image + "\n");}
+    |<SMALLER_THAN:"<">  {System.out.println("SMALLER_THAN ->"+ image + "\n");}
+    |<GREATER_THAN:">">  {System.out.println("GREATER_THAN ->"+ image + "\n");}
 }
 
 //Identificadores
@@ -82,10 +82,10 @@ TOKEN : {
 
 TOKEN :
 {
-    <ID: (["a"-"z"]|["A"-"Z"])(["a"-"z"]|["A"-"Z"]["0"-"9"])*> {System.out.println("ID ->"+ img + "\n");}
+    <ID: (["a"-"z"]|["A"-"Z"])(["a"-"z"]|["A"-"Z"]["0"-"9"])*> {System.out.println("ID ->"+ image + "\n");}
 }
 
 TOKEN :
 {
-    <NUMBER: (["0"-"9"])+> {System.out.println("NUMBER ->"+ img + "\n");}
+    <NUMBER: (["0"-"9"])+> {System.out.println("NUMBER ->"+ image + "\n");}
 }
